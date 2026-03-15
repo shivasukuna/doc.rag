@@ -1,0 +1,109 @@
+├── Project/
+│   ├── benchmark.py
+│   ├── chunking.py
+│   ├── chunks.pkl
+│   ├── conversation_store.py
+│   ├── debug_docs.py
+│   ├── embedding_service.py
+│   ├── faiss.index
+│   ├── llm_service.py
+│   ├── main.py
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── rag.db
+│   ├── rag_service.py
+│   ├── reranker_service.py
+│   ├── struct.py
+│   ├── test.py
+│   ├── uuid.text
+│   ├── vector_store.py
+│   ├── backend/
+│   │   ├── database.py
+│   │   ├── models.py
+│   ├── Progress ss/
+│   ├── rag-frontend/
+│   │   ├── .gitignore
+│   │   ├── components.json
+│   │   ├── eslint.config.mjs
+│   │   ├── next-env.d.ts
+│   │   ├── next.config.ts
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── postcss.config.mjs
+│   │   ├── README.md
+│   │   ├── tsconfig.json
+│   │   ├── app/
+│   │   │   ├── favicon.ico
+│   │   │   ├── globals.css
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── fonts/
+│   │   │   │   ├── JetBrainsMono-Bold-Italic.woff2
+│   │   │   │   ├── JetBrainsMono-Bold.woff2
+│   │   │   │   ├── JetBrainsMono-ExtraBold-Italic.woff2
+│   │   │   │   ├── JetBrainsMono-ExtraBold.woff2
+│   │   │   │   ├── JetBrainsMono-Italic.woff2
+│   │   │   │   ├── JetBrainsMono-Medium-Italic.woff2
+│   │   │   │   ├── JetBrainsMono-Medium.woff2
+│   │   │   │   ├── JetBrainsMono-Regular.woff2
+│   │   │   ├── main/
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── page.tsx
+│   │   ├── components/
+│   │   │   ├── ai-response.tsx
+│   │   │   ├── app-sidebar.tsx
+│   │   │   ├── streaming-text.tsx
+│   │   │   ├── thinking-shimmer.tsx
+│   │   │   ├── ui/
+│   │   │   │   ├── alert-dialog.tsx
+│   │   │   │   ├── avatar.tsx
+│   │   │   │   ├── button.tsx
+│   │   │   │   ├── dialog.tsx
+│   │   │   │   ├── drawer.tsx
+│   │   │   │   ├── field.tsx
+│   │   │   │   ├── input.tsx
+│   │   │   │   ├── label.tsx
+│   │   │   │   ├── message.tsx
+│   │   │   │   ├── orb.tsx
+│   │   │   │   ├── popover.tsx
+│   │   │   │   ├── progress.tsx
+│   │   │   │   ├── response.tsx
+│   │   │   │   ├── separator.tsx
+│   │   │   │   ├── sheet.tsx
+│   │   │   │   ├── shimmering-text.tsx
+│   │   │   │   ├── sidebar.tsx
+│   │   │   │   ├── skeleton.tsx
+│   │   │   │   ├── sonner.tsx
+│   │   │   │   ├── tooltip.tsx
+│   │   ├── context/
+│   │   │   ├── ConversationContext.tsx
+│   │   ├── fonts/
+│   │   │   ├── The2K12.ttf
+│   │   ├── hooks/
+│   │   │   ├── use-mobile.ts
+│   │   │   ├── useChat.ts
+│   │   ├── lib/
+│   │   │   ├── api.ts
+│   │   │   ├── utils.ts
+│   │   ├── public/
+│   │   │   ├── file.svg
+│   │   │   ├── globe.svg
+│   │   │   ├── next.svg
+│   │   │   ├── vercel.svg
+│   │   │   ├── window.svg
+│   │   │   ├── fonts/
+│   │   │   │   ├── The2K12.ttf
+│   │   │   ├── logo/
+│   │   │   │   ├── Doc.RAG.svg
+│   │   │   │   ├── fresh.svg
+│   │   │   │   ├── fresh1.svg
+│   ├── REQ/
+│   │   ├── Argumentative-Essay.pdf
+│   │   ├── Argumentative-Essay.png
+│   │   ├── BGMI_Complete_Guide.pdf
+│   │   ├── MINECRAFT.pdf
+│   │   ├── Minecraft_and_Redstone_Guide.pdf
+│   │   ├── NOC (2) (1).pdf
+│   │   ├── uuid.text
+│   │   ├── uvicorn.txt
+│   │   ├── VALORANT_Complete_Guide.pdf
