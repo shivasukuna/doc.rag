@@ -40,6 +40,13 @@
 > • Not suitable for real-world deployment  
 >
 > This was built to learn and experiment with RAG, LLMs, and full-stack development.
+
+### Screenshot
+
+<p align="center">
+  <img src="readme-files/screenshot.png" alt="Doc.RAG Interface" width="900">
+</p>
+
 ### Prerequisites
 
 - **Node.js** 18+
