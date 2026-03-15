@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 
 <p align="center">
-  <img src="readme-files/Doc.RAG.svg" alt="Doc.RAG" width="300">
+  <img src="readme-files/Doc.RAG.svg" alt="Doc.RAG" width="600">
 </p>
 
 <p align="center">
