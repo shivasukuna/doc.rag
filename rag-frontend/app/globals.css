@@ -146,18 +146,18 @@ div::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track,
 div::-webkit-scrollbar-track {
-  background: #0f0f0f;
+  background: #171717;
 }
 
 body::-webkit-scrollbar-thumb,
 div::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #171717;
   border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb:hover,
 div::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: #171717;
 }
 
 html, body {

@@ -14,6 +14,9 @@ from pdf2image import convert_from_bytes
 import pytesseract
 from uuid import uuid4
 
+from bm25_service import build_bm25_index
+from bm25_service import delete_bm25_index
+
 from chunking import chunk_text
 from embedding_service import embed_texts
 from vector_store import add_embeddings, search, delete_document_embeddings
@@ -115,17 +118,17 @@ async def upload(file: UploadFile = File(...)):
             extracted = page.extract_text()
 
             if extracted and extracted.strip():
+                chunks = chunk_text(
+                    extracted,
+                    doc_id=doc_id,
+                    source=file.filename,
+                    page=page_number
+                    )
+                metadata_list.extend(chunks)
 
-                chunks = chunk_text(extracted)
-
-                for chunk in chunks:
-
-                    metadata_list.append({
-                        "text": chunk,
-                        "source": file.filename,
-                        "page": page_number,
-                        "doc_id": doc_id
-                    })
+                print("Total chunks created:", len(metadata_list))
+                build_bm25_index(doc_id, metadata_list)
+                print("📚 BM25 index built")
 
         # -----------------------------
         # OCR FALLBACK
@@ -141,17 +144,17 @@ async def upload(file: UploadFile = File(...)):
                 extracted = pytesseract.image_to_string(image)
 
                 if extracted and extracted.strip():
+                    chunks = chunk_text(
+                        extracted,
+                        doc_id=doc_id,
+                        source=file.filename,
+                        page=page_number
+                        )
+                    metadata_list.extend(chunks)
 
-                    chunks = chunk_text(extracted)
-
-                    for chunk in chunks:
-
-                        metadata_list.append({
-                            "text": chunk,
-                            "source": file.filename,
-                            "page": page_number,
-                            "doc_id": doc_id
-                        })
+                    print("Total chunks created:", len(metadata_list))
+                    build_bm25_index(doc_id, metadata_list)
+                    print("📚 BM25 index built")
 
         if not metadata_list:
 
@@ -228,6 +231,9 @@ def delete_document(doc_id: str):
             }
 
         removed_chunks = delete_document_embeddings(doc_id)
+
+        delete_bm25_index(doc_id)
+        print(f"[DOC DELETE] BM25 index removed for {doc_id}")
 
         db.delete(doc)
         db.commit()
